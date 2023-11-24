@@ -62,9 +62,7 @@ public class EtudiantServiceInterfaceImpl implements EtudiantServiceInterface{
 
     @Override
     public EtudiantResponseDTO getEtudiantById(Integer id) {
-        EtudiantResponseDTO etuRespense =new EtudiantResponseDTO();
-        Etudiant e=etudiantRepository.findById(id).get();
-        etuRespense=etudiantInterfaceMap.ETUDIANT_ToResponseDTO(e);
-        return etuRespense;
+        Etudiant a=etudiantRepository.findById(id).get();
+        return etudiantInterfaceMap.ETUDIANT_ToResponseDTO(a);
     }
 }

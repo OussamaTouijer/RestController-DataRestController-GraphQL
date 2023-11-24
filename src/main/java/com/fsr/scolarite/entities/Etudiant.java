@@ -10,7 +10,7 @@ import lombok.*;
 @Data @Getter @NoArgsConstructor @AllArgsConstructor @ToString @Builder @Setter
 public class Etudiant {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Float idEtudiant;
+    private Integer idEtudiant;
     private String nom;
     private String prenom;
     private String email;

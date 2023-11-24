@@ -1,23 +1,36 @@
 type Query{
-     listerEtudiants : [Etudiant]
-     etudiantById(id : Float):Etudiant
+     getAll : [EtudiantResponseDTO]
+     getEtudiantById(id : Float!):Etudiant
 }
 
 type Mutation{
-     addEtudiant(etudiant:EtudiantRequestDTO):Etudiant
+     save(etudiant:EtudiantRequestDTO):EtudiantResponseDTO
+     delete(id : Float! ) : Etudiant
+     update(id : Float!,input:EtudiantRequestDTO!) :Etudiant
 }
 
+
+type EtudiantResponseDTO {
+     idEtudiant : Float ,
+     nom : String ,
+     prenom : String
+     email : String,
+
+}
 
 type Etudiant {
      idEtudiant : Float ,
      nom : String ,
      prenom : String
      email : String,
+
 }
 
 input EtudiantRequestDTO{
+     idEtudiant : Float ,
      nom : String ,
      prenom : String
      email : String,
+
 }
 
