@@ -1,0 +1,23 @@
+type Query{
+     listerEtudiants : [Etudiant]
+     etudiantById(id : Float):Etudiant
+}
+
+type Mutation{
+     addEtudiant(etudiant:EtudiantRequestDTO):Etudiant
+}
+
+
+type Etudiant {
+     idEtudiant : Float ,
+     nom : String ,
+     prenom : String
+     email : String,
+}
+
+input EtudiantRequestDTO{
+     nom : String ,
+     prenom : String
+     email : String,
+}
+
