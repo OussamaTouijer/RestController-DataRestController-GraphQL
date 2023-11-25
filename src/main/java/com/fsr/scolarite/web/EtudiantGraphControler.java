@@ -64,8 +64,17 @@ public EtudiantResponseDTO getEtudiantById(@Argument Integer id){ return etudian
 //    }
 
     @MutationMapping
-    public void update(@Argument Integer id ,EtudiantRequestDTO input) {
+    public void update(@Argument Integer id ,@Argument EtudiantRequestDTO input) {
         etudiantServiceInterface.update(id, input);
     }
+
+//    mutation {
+//        update(id: 4, input: { nom: "zina", prenom: "balghiti", email: "zina@fsr.com" }) {
+//            nom
+//            prenom
+//            email
+//        }
+//    }
+
 
 }
