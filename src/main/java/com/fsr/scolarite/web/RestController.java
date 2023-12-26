@@ -48,6 +48,6 @@ public class RestController {
 
     @GetMapping("/tests")
     public String sayHi(){
-        return "hello";
+        return "oussama";
     }
 }
