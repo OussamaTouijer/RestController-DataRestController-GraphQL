@@ -45,4 +45,9 @@ public class RestController {
     public void delete(@PathVariable("id") Integer id) {
         etudiantServiceInterface.delete(id);
     }
+
+    @GetMapping("/tests")
+    public String sayHi(){
+        return "hello";
+    }
 }
