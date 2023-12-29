@@ -46,8 +46,4 @@ public class RestController {
         etudiantServiceInterface.delete(id);
     }
 
-    @GetMapping("/tests")
-    public String sayHi(){
-        return "oussama";
-    }
 }
